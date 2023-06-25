@@ -30,7 +30,7 @@ exports.randomExam = async (req, res) => {
 
 exports.examResult = async (req, res) => {
   const bigerThen = testData?.scoresList?.filter(
-    (score) => score < req?.params?.score
+    (score) => score < req?.body?.score
   );
   const resualt = Number(
     ((bigerThen?.length * 100) / testData?.scoresList?.length).toFixed(2)

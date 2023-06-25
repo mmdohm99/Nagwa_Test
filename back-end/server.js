@@ -5,8 +5,6 @@ const examRouter = require("./routes/examRouter.js");
 app.use(express.json());
 app.use("/exam", examRouter);
 
-
-
 app.get("*", (req, res, next) => {
   const err = new Error("sorry,this is invalid url");
   err.status = "fail";
